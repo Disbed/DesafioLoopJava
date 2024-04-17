@@ -6,8 +6,8 @@ public class DesafioJava {
         String tipoConta = "Corrente";
         double saldo = 2500;
         int opcaoMenu;
-        int valorReceber;
-        int valorTransferir;
+        double valorReceber;
+        double valorTransferir;
         String menu = """
                 ************************************************
                 Dados iniciais do cliente:
@@ -46,14 +46,14 @@ public class DesafioJava {
                 opcaoMenu = leitura.nextInt();
             } else if (opcaoMenu == 2) {
                 System.out.println("Digite o valor que deseja receber :");
-                valorReceber = leitura.nextInt();
+                valorReceber = leitura.nextDouble();
                 saldo += valorReceber;
                 System.out.println("Saldo atualizado  R$" + saldo);
                 System.out.println(opcoesMenu);
                 opcaoMenu = leitura.nextInt();
             } else if (opcaoMenu == 3) {
                 System.out.println("Digite o valor que deseja transferir");
-                valorTransferir = leitura.nextInt();
+                valorTransferir = leitura.nextDouble();
                 if (valorTransferir <= saldo) {
                     saldo -= valorTransferir;
                     System.out.println("Saldo atualizado  R$" + saldo);
